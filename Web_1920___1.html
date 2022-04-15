@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web 1920 – 1</title>
-<link rel="stylesheet" href="Web_1920.css">
+<link rel="stylesheet" href="/Web_1920.css">
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
 		--web-view-name: Web 1920 – 1;
@@ -303,30 +303,8 @@
 	<img id="signmain" src="signmain.png" srcset="signmain.png 1x, signmain@2x.png 2x">
 		
 </div>
-<script>
-	function getParams(){
-                var idx = document.URL.indexOf('?');
-                var params = new Array();
-                if (idx != -1) {
-                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
-                    for (var i=0; i<pairs.length; i++){
-                        nameVal = pairs[i].split('=');
-                        params[nameVal[0]] = nameVal[1];
-                    }
-                }
-                return params;
-            }
-            params = getParams();
-            Student = unescape(params["Student"]);
-            Cours = unescape(params["Cours"]);
-            fSDate = unescape(params["fSdate"]);
-			fTDate = unescape(params["fTdate"]);
-			CoursN = unescape(params["CoursN"]);
-	document.getElementById("Sname").innerHTML = Student;
-	document.getElementById("Scourse").innerHTML = Cours;
-	document.getElementById("SfDate").innerHTML=fSDate;
-	document.getElementById("StDate").innerHTML=fTDate;
-	document.getElementById("SCname").innerHTML=CoursN;
+<script src="/formdata.js">
+	
 </script>
 </body>
 </html>
